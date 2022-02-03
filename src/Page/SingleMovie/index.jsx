@@ -25,6 +25,8 @@ import config from '../../config.js';
 
 const SingleMovie = () => {
 
+  console.log(document.title);
+
   const [ searchParams ] = useSearchParams();
   const navigate = useNavigate();
   const [ getSingleMovie, movieDetails, isLoading, error] = useGetSingleMovie()
@@ -34,6 +36,8 @@ const SingleMovie = () => {
 
   useEffect( () => {
     getSingleMovie(idMovie)
+    document.title = 'eflix | Movie';
+
   }, [])
 
   const HandleVideo = (id) => {

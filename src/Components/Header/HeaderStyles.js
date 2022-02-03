@@ -5,9 +5,12 @@ import { ContentIconsGlobal } from "../../Styles/Globals/Icons.js";
 export const ContentHeader = styled.header`
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   background: ${ props => props.theme.colors.dark };
   padding: 20px 15px;
+  @media (min-width: ${ props => props.theme.breakpoints.tablet }) {
+    padding: 20px 30px;
+  }
 `
 
 export const Brand = styled.div`

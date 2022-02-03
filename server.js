@@ -3,17 +3,17 @@ import fs from "fs";
 
 import express from "express";
 import React from 'react';
-import ReactDOMServer from "react-dom/server";
+import { renderToString } from "react-dom/server";
 
 import App from './src/App.jsx';
 
 const app = express();
 
 // Middleware
-app.use(express.static( path.join( __dirname, "dist")));
+app.use(express.static( path.join( __dirname, "public")));
 
 app.get('/', (req, res) => {
-  const renderApp = ReactDOMServer.renderToString(<App />);
+  const renderApp = renderToString(<App />);
   const indexFile = path.join( __dirname, 'dist', 'index.html' );
 
   fs.readFile(indexFile, 'utf8', (err, data) => {

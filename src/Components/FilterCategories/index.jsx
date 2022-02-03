@@ -37,7 +37,7 @@ const FilterCategories = () => {
 
         {
           isLoading
-            ? (<div>Loading</div>)
+            ? (<div></div>)
             : list.map(category => (
                 <Category 
                   key={category.id}
