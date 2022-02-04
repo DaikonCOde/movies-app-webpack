@@ -50,7 +50,8 @@ const ComingSoon = () => {
             // when window width is >= 640px
             640: {
               width: 640,
-              slidesPerView: 2,
+              slidesPerView: 1,
+              centeredSlides: true
             },
             // when window width is >= 768px
             768: {
