@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+// Hooks
 import { useGetCategories } from "./Hooks/useGetCategories";
 import { useGetMoviesTrending } from './Hooks/useGetMoviesTrending';
 // Pages

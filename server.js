@@ -13,6 +13,7 @@ const app = express();
 app.use(express.static( path.join( __dirname, "public")));
 
 app.get('/', (req, res) => {
+
   const renderApp = renderToString(<App />);
   const indexFile = path.join( __dirname, 'dist', 'index.html' );
 
@@ -21,6 +22,8 @@ app.get('/', (req, res) => {
       console.error('Something went wrong:', err);
       return res.status(500).send('Oops, better luck next time!');
     }
+
+    
 
     return res.send(
       data.replace('<div id="root"></div>', `<div id="root">${renderApp}</div>`)

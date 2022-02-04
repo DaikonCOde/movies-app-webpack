@@ -37,7 +37,7 @@ const ComingSoon = () => {
       <Title>Comming Soon</Title>
       <Swiper
         slidesPerView={1}
-        centeredSlides={true}
+        centeredSlides={false}
         spaceBetween={10}
         navigation={true}
         pagination={{
@@ -55,18 +55,15 @@ const ComingSoon = () => {
             // when window width is >= 768px
             768: {
               width: 768,
-              slidesPerView: 2,
-              centeredSlides: false
+              slidesPerView: 2
             },
             1024: {
               width: 1024,
-              slidesPerView: 3,
-              centeredSlides: false
+              slidesPerView: 3
             },
             1440: {
               width: 1440,
-              slidesPerView: 3,
-              centeredSlides: false
+              slidesPerView: 3
             }
           }
         }

@@ -6,7 +6,7 @@ export const Content = styled.section`
   min-width: 300px;
   min-height: 100vh;
   color: ${ props => props.theme.colors.light };
-  padding: 0 15px;
+  padding: 0 15px 20px;
   @media (min-width: ${ props => props.theme.breakpoints.laptop }) {
     padding: 0 25px 25px;
   }

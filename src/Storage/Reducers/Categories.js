@@ -11,7 +11,11 @@ export const Categories = createSlice({
   initialState,
   reducers: {
     insert: (state, action) => {
-      const { list, isLoading, error } = action.payload
+
+      // action.type; Categories
+      // action.payload;
+
+      const { list, isLoading, error } = action.payload;
       state.list = list;
       state.isLoading = isLoading;
       state.error = error
